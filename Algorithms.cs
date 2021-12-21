@@ -8,6 +8,13 @@ namespace Example.Algorithms
 {
     public static class Experiments
     {
+        /// <summary>
+        /// Дан массив из нулей и единиц.
+        /// Нужно определить, какой максимальный по длине подинтервал единиц можно получить,
+        /// удалив ровно один элемент массива.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns>Result</returns>
         public static int Algorithm1_1(int[] arr)
         {
             var curr = 0;
@@ -29,6 +36,13 @@ namespace Example.Algorithms
             return Max(result, curr);
         }
 
+        /// <summary>
+        /// Дан массив из нулей и единиц.
+        /// Нужно определить, какой максимальный по длине подинтервал единиц можно получить,
+        /// удалив ровно один элемент массива.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns>Result</returns>
         public static int Algorithm1_2(int[] arr)
         {
             if (arr.Length == 0)
@@ -63,17 +77,36 @@ namespace Example.Algorithms
             return best;
         }
 
+        /// <summary>
+        /// Вернуть 2 наибольших числа в массиве
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="k"></param>
+        /// <returns>Result</returns>
         public static IEnumerable<int> Algorithm2_1(int[] arr, int k)
         {
             return new SortedSet<int>(arr).Reverse().Take(k);
         }
 
         readonly static Comparer<int> _comparer = Comparer<int>.Create((a, b) => b - a);
+
+        /// <summary>
+        /// Вернуть 2 наибольших числа в массиве
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="k"></param>
+        /// <returns>Result</returns>
         public static IEnumerable<int> Algorithm2_2(int[] arr, int k)
         {
             return new SortedSet<int>(arr, _comparer).Take(k);
         }
 
+        /// <summary>
+        /// Вернуть 2 наибольших числа в массиве
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="k"></param>
+        /// <returns>Result</returns>
         public static IEnumerable<int> Algorithm2_3(int[] arr, int k)
         {
             var set = new SortedSet<int>(_comparer);
@@ -94,6 +127,12 @@ namespace Example.Algorithms
             return set.Take(k);
         }
 
+        /// <summary>
+        /// Вернуть 2 наибольших числа в массиве
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="k"></param>
+        /// <returns>Result</returns>
         public static IEnumerable<int> Algorithm2_4(int[] arr, int k)
         {
             var set = new SortedSet<int>(_comparer);
@@ -111,6 +150,11 @@ namespace Example.Algorithms
             return set.Take(k);
         }
 
+        /// <summary>
+        /// Сжатие строки (RLE)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>Result</returns>
         public static string Algorithm3_1(string s)
         {
             if (s.Length == 0)
@@ -146,6 +190,11 @@ namespace Example.Algorithms
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Дан вектор, надо удалить из него нули, сохранив порядок остальных элементов
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns>Result</returns>
         public static IEnumerable<int> Algorithm4_1(int[] arr)
         {
             var p = 0;
@@ -159,6 +208,13 @@ namespace Example.Algorithms
             return arr[..p];
         }
 
+        /// <summary>
+        /// Найти K ближайших к заданному элементов в отсортированном массиве
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="k"></param>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static IEnumerable<int> Algorithm5_1(int[] arr, int k, int x)
         {
             if (arr.Length <= k)
@@ -182,7 +238,6 @@ namespace Example.Algorithms
                 }
                 else
                 {
-                    // here
                     right = mid;
                 }
             }
