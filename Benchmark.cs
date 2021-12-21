@@ -16,7 +16,7 @@ using Example.Algorithms;
 [Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [RankColumn(NumeralSystem.Arabic)]
 [MarkdownExporter]
-public class Benchy
+public class Benchmark
 {
     private static int[][] dataset1 = Tests.Test1Dataset().Select(p => (int[])p[0]).ToArray();
     private static (int[], int)[] dataset2 = Tests.Test2Dataset().Select(p => ((int[])p[0], (int)p[1])).ToArray();
@@ -29,7 +29,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset1.Length; i < l; i++)
         {
-            Experiments.Algorithm1_1(dataset1[i]);
+            Algorithms.Algorithm1_1(dataset1[i]);
         }
     }
 
@@ -38,7 +38,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset1.Length; i < l; i++)
         {
-            Experiments.Algorithm1_2(dataset1[i]);
+            Algorithms.Algorithm1_2(dataset1[i]);
         }
     }
 
@@ -47,7 +47,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset2.Length; i < l; i++)
         {
-            Experiments.Algorithm2_1(dataset2[i].Item1, dataset2[i].Item2);
+            Algorithms.Algorithm2_1(dataset2[i].Item1, dataset2[i].Item2);
         }
     }
 
@@ -56,7 +56,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset2.Length; i < l; i++)
         {
-            Experiments.Algorithm2_2(dataset2[i].Item1, dataset2[i].Item2);
+            Algorithms.Algorithm2_2(dataset2[i].Item1, dataset2[i].Item2);
         }
     }
 
@@ -65,7 +65,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset2.Length; i < l; i++)
         {
-            Experiments.Algorithm2_3(dataset2[i].Item1, dataset2[i].Item2);
+            Algorithms.Algorithm2_3(dataset2[i].Item1, dataset2[i].Item2);
         }
     }
 
@@ -74,7 +74,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset2.Length; i < l; i++)
         {
-            Experiments.Algorithm2_3(dataset2[i].Item1, dataset2[i].Item2);
+            Algorithms.Algorithm2_3(dataset2[i].Item1, dataset2[i].Item2);
         }
     }
 
@@ -83,7 +83,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset3.Length; i < l; i++)
         {
-            Experiments.Algorithm3_1(dataset3[i]);
+            Algorithms.Algorithm3_1(dataset3[i]);
         }
     }
 
@@ -92,7 +92,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset4.Length; i < l; i++)
         {
-            Experiments.Algorithm4_1(dataset4[i]);
+            Algorithms.Algorithm4_1(dataset4[i]);
         }
     }
 
@@ -101,7 +101,7 @@ public class Benchy
     {
         for (int i = 0, l = dataset5.Length; i < l; i++)
         {
-            Experiments.Algorithm5_1(dataset5[i].Item1, dataset5[i].Item2, dataset5[i].Item3);
+            Algorithms.Algorithm5_1(dataset5[i].Item1, dataset5[i].Item2, dataset5[i].Item3);
         }
     }
 }

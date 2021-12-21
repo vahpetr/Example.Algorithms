@@ -30,14 +30,14 @@ public class Tests
     [Theory, MemberData(nameof(Test1Dataset))]
     public void Test1_1(int[] arr, int expect)
     {
-        var result = Experiments.Algorithm1_1(arr);
+        var result = Algorithms.Algorithm1_1(arr);
         Assert.True(result == expect, $"expect: {expect}, result: {result}");
     }
 
     [Theory, MemberData(nameof(Test1Dataset))]
     public void Test1_2(int[] arr, int expect)
     {
-        var result = Experiments.Algorithm1_2(arr);
+        var result = Algorithms.Algorithm1_2(arr);
         Assert.True(result == expect, $"expect: {expect}, result: {result}");
     }
 
@@ -60,28 +60,28 @@ public class Tests
     [Theory, MemberData(nameof(Test2Dataset))]
     public void Test2_1(int[] arr, int k, int[] expect)
     {
-        var result = Experiments.Algorithm2_1(arr, k);
+        var result = Algorithms.Algorithm2_1(arr, k);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 
     [Theory, MemberData(nameof(Test2Dataset))]
     public void Test2_2(int[] arr, int k, int[] expect)
     {
-        var result = Experiments.Algorithm2_2(arr, k);
+        var result = Algorithms.Algorithm2_2(arr, k);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 
     [Theory, MemberData(nameof(Test2Dataset))]
     public void Test2_3(int[] arr, int k, int[] expect)
     {
-        var result = Experiments.Algorithm2_3(arr, k);
+        var result = Algorithms.Algorithm2_3(arr, k);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 
     [Theory, MemberData(nameof(Test2Dataset))]
     public void Test2_4(int[] arr, int k, int[] expect)
     {
-        var result = Experiments.Algorithm2_4(arr, k);
+        var result = Algorithms.Algorithm2_4(arr, k);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 
@@ -97,7 +97,7 @@ public class Tests
     [Theory, MemberData(nameof(Test3Dataset))]
     public void Test3_1(string text, string expect)
     {
-        var result = Experiments.Algorithm3_1(text);
+        var result = Algorithms.Algorithm3_1(text);
         Assert.True(expect == result, $"expect: {expect}, result: {result}");
     }
 
@@ -116,7 +116,7 @@ public class Tests
     [Theory, MemberData(nameof(Test4Dataset))]
     public void Test4_1(int[] arr, int[] expect)
     {
-        var result = Experiments.Algorithm4_1(arr);
+        var result = Algorithms.Algorithm4_1(arr);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 
@@ -134,7 +134,7 @@ public class Tests
     [Theory, MemberData(nameof(Test5Dataset))]
     public void Test5_1(int[] arr, int k, int x, int[] expect)
     {
-        var result = Experiments.Algorithm5_1(arr, k, x);
+        var result = Algorithms.Algorithm5_1(arr, k, x);
         Assert.Collection(result, CreateElementInspectors(expect));
     }
 

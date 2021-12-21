@@ -6,7 +6,7 @@ using static System.Math;
 
 namespace Example.Algorithms
 {
-    public static class Experiments
+    public static class Algorithms
     {
         /// <summary>
         /// Дан массив из нулей и единиц.
