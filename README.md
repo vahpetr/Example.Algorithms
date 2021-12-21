@@ -26,7 +26,7 @@ Intel Core i9-9880H CPU 2.30GHz, 1 CPU, 16 logical and 8 physical cores
   [Host]     : .NET 6.0.1 (6.0.121.56705), X64 RyuJIT
   Job-USRMOK : .NET 6.0.1 (6.0.121.56705), X64 RyuJIT
 
-Runtime=.NET 6.0  IterationCount=5  
+Runtime=.NET 6.0  IterationCount=5
 
 ```
 |   Method | Categories |        Mean |     Error |    StdDev |         Min |         Max |      Median | Ratio | RatioSD | Rank |  Gen 0 | Allocated |
@@ -46,4 +46,4 @@ Runtime=.NET 6.0  IterationCount=5
 | Bench5_1 | Algorithm5 |    73.10 ns | 11.906 ns |  3.092 ns |    68.12 ns |    75.58 ns |    74.34 ns |  1.00 |    0.00 |    1 | 0.0191 |     160 B |
 
 ## Links
-1. [BenchmarkDotNet](ttps://benchmarkdotnet.org/articles/overview.html)
+1. [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html)
